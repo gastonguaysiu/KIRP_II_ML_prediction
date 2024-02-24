@@ -35,11 +35,11 @@ This repository contains a series of R scripts designed to execute a multi-phase
 
 ## MISSING FILES from RNA_seq data
 
-trainingData.csv --- 274.9MB  --- 8 June 2023
-The file trainingData.csv is a subset database for the normalized TPM values associated with all transcripts (including different isoforms) from patients that were use to train the ML model
+trainingData.csv --- 1.6GB  --- 6 June 2023
+The file trainingData.csv is a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from samples from patients used for the training phase.
 
-tpm_RNA_seq2.csv --- 93.2MB  --- 10 June 2023
-This file is a comprehensive database for the raw TPM transcript values associated collected from all patients. Contains the TPM value for all the patients.
+mval_all.csv --- 2.0 GB  --- 28 Oct 2022
+This file is a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from all patients.
 
-tpm_mod_RNA_seq.csv --- 94.8MB  --- 6 June 2023
-This file is a comprehensive database for the raw TPM transcript values associated collected from all patients; along with tow addition columns, on for the gene name associated with the transcript, and on for the type of transcript (e.g. protein coding)
+mval_all2.csv --- 2.0 GB  --- 28 Oct 2022
+Initially, I was going to combine multi-omic data; as such, this fill contains a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from patients that had publicly available methylation data (450k Illumina), miRNA data, RNAseq data from KIRP TCGA project.
