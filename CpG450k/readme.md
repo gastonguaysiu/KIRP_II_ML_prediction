@@ -33,7 +33,7 @@ This repository contains a series of R scripts designed to execute a multi-phase
    - Proceed with `alt_fixed_position.R` for phase 4.
    - (Optional) Run `alt_opt_CpG_f1.R` to observe the attempted dimensionality reduction and its effects.
 
-## MISSING FILES from RNA_seq data
+### MISSING FILES from RNA_seq data
 
 trainingData.csv --- 1.6GB  --- 6 June 2023
 The file trainingData.csv is a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from samples from patients used for the training phase.
