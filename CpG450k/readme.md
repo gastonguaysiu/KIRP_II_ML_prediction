@@ -33,3 +33,13 @@ This repository contains a series of R scripts designed to execute a multi-phase
    - Proceed with `alt_fixed_position.R` for phase 4.
    - (Optional) Run `alt_opt_CpG_f1.R` to observe the attempted dimensionality reduction and its effects.
 
+## MISSING FILES from RNA_seq data
+
+trainingData.csv --- 274.9MB  --- 8 June 2023
+The file trainingData.csv is a subset database for the normalized TPM values associated with all transcripts (including different isoforms) from patients that were use to train the ML model
+
+tpm_RNA_seq2.csv --- 93.2MB  --- 10 June 2023
+This file is a comprehensive database for the raw TPM transcript values associated collected from all patients. Contains the TPM value for all the patients.
+
+tpm_mod_RNA_seq.csv --- 94.8MB  --- 6 June 2023
+This file is a comprehensive database for the raw TPM transcript values associated collected from all patients; along with tow addition columns, on for the gene name associated with the transcript, and on for the type of transcript (e.g. protein coding)
