@@ -42,4 +42,4 @@ mval_all.csv --- 2.0 GB  --- 28 Oct 2022
 This file is a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from all patients.
 
 mval_all2.csv --- 2.0 GB  --- 28 Oct 2022
-Initially, I was going to combine multi-omic data; as such, this fill contains a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from patients that had publicly available methylation data (450k Illumina), miRNA data, RNAseq data from KIRP TCGA project.
+Initially, I was going to combine multi-omic data; as such, this file contains a comprehensive database for the methylation values (m-values) associated with all the CpG probes collected from patients that had publicly available methylation data (450k Illumina), miRNA data, RNAseq data from KIRP TCGA project.
