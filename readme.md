@@ -11,7 +11,7 @@ The dataset is partitioned into two segments:
 ## Predictive ML Workflow
 The workflow is segmented into phases, each designed to refine the model's accuracy through a series of iterations. The following detailed flowchart illustrates this process.
 
-![Alt text](/path/to/image.jpg)
+![Alt text](/ML_lock.png)
 
 ### Phase 1: Initialization (e0)
 - Utilizes all available probes to form a comprehensive (probe ✕ sample) matrix, ensuring no missing values across samples.
