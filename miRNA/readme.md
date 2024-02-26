@@ -32,4 +32,5 @@ The primary challenge in employing miRNA data for k-means clustering lies in the
    - `alt_fixed_position.R` for phase 4.
    - (Optional) `alt_opt_miRNA_f1.R` to observe the attempted dimensionality reduction and its effects.
 
-
+## Discussion & Conclusion
+In our research, we devised a predictive machine learning (ML) algorithm distinct from our investigative algorithm. The F1 score within our worst overall survival group was less accurate than when using the methylation data, with a training f1 score of 0.3258 and a f1 in testing data of 0.3280. This may be linked to  miRNAs' tendency to affect many genes inadvertently, leading to too much generalizability and heterogeneity within the data. This issue arises from miRNA's variable and often incomplete binding to target sequences, leading to a phenomenon known as "Too Many Targets for miRNA Effect" (TMTME).
