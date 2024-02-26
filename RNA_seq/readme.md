@@ -7,7 +7,7 @@ This repository hosts a series of R scripts and data files developed to classify
 ### Hyperparameter Optimization and Dimensionality Reduction
 
 - **Script Name:** `split_data.R`
-- **Purpose:** Aimed at splitting the initial data set into the trainning (90%) and validation (10%) dataset. One key note about this is that the name of the files need to be cross reference across the different data types (CpG450K, or miRNA), should one choose to combine the data for a multi-omic predictive evaluation.
+- **Purpose:** Aimed at splitting the initial data set into the training (90%) and validation (10%) dataset. One key note about this is that the files' names need to be cross-referenced across the different data types (CpG450K, or miRNA), should one choose to combine the data for a multi-omic predictive evaluation.
 
 ### Phases 1 to 3: Convergence Series
 
@@ -26,7 +26,7 @@ This repository hosts a series of R scripts and data files developed to classify
 
 ## Challenges with RNA_seq Hyperparameters
 
-The primary challenge in employing RNA_seq data for k-means clustering lies in the relatively low quality of the data brought on by the purity of the tumour. In the RNA_seq data, the normal tissue sample chare the highest similarity to the worst OS group based on PCA analysis.
+The primary challenge in employing RNA_seq data for k-means clustering lies in the relatively low quality of the data brought on by the purity of the tumour. In the RNA_seq data, the normal tissue sample has the highest similarity to the worst OS group based on PCA analysis.
 
 ## Running the Scripts
 
@@ -37,13 +37,13 @@ The primary challenge in employing RNA_seq data for k-means clustering lies in t
    - `alt_fixed_position.R` for phase 4.
    - (Optional) `alt_opt_RNAseq_f1.R` to observe the attempted dimensionality reduction and its effects.
 
-## MISSING FILES from RNA_seq data
+### MISSING FILES from RNA_seq data
 
 trainingData.csv --- 274.9MB  --- 8 June 2023
-The file trainingData.csv is a subset database for the normalized TPM values associated with all transcripts (including different isoforms) from patients that were use to train the ML model
+The file trainingData.csv is a subset database for the normalized TPM values associated with all transcripts (including different isoforms) from patients that were used to train the ML model
 
 tpm_RNA_seq2.csv --- 93.2MB  --- 10 June 2023
-This file is a comprehensive database for the raw TPM transcript values associated collected from all patients. Contains the TPM value for all the patients.
+This file is a comprehensive database for the raw TPM transcript values collected from all patients. Contains the TPM value for all the patients.
 
 tpm_mod_RNA_seq.csv --- 94.8MB  --- 6 June 2023
 This file is a comprehensive database for the raw TPM transcript values associated collected from all patients; along with tow addition columns, on for the gene name associated with the transcript, and on for the type of transcript (e.g. protein coding)
