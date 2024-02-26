@@ -7,7 +7,7 @@ This repository hosts a series of R scripts and data files developed to classify
 ### Hyperparameter Optimization and Dimensionality Reduction
 
 - **Script Name:** `split_data.R`
-- **Purpose:** Aimed at splitting the initial data set into the training (90%) and validation (10%) dataset. One key note about this is that the files' names need to be cross-referenced across the different data types (CpG450K, or miRNA), should one choose to combine the data for a multi-omic predictive evaluation.
+- **Purpose:** Aimed at splitting the initial data set into the training (90%) and validation (10%) dataset. One key note about this is that the files' names must be cross-referenced across the different data types (CpG450K, or miRNA), should one combine the data for a multi-omic predictive evaluation.
 
 ### Phases 1 to 3: Convergence Series
 
@@ -43,7 +43,10 @@ trainingData.csv --- 274.9MB  --- 8 June 2023
 The file trainingData.csv is a subset database for the normalized TPM values associated with all transcripts (including different isoforms) from patients that were used to train the ML model
 
 tpm_RNA_seq2.csv --- 93.2MB  --- 10 June 2023
-This file is a comprehensive database for the raw TPM transcript values collected from all patients. Contains the TPM value for all the patients.
+This file is a comprehensive database for all patients' raw TPM transcript values. Contains the TPM value for all the patients.
 
 tpm_mod_RNA_seq.csv --- 94.8MB  --- 6 June 2023
-This file is a comprehensive database for the raw TPM transcript values associated collected from all patients; along with tow addition columns, on for the gene name associated with the transcript, and on for the type of transcript (e.g. protein coding)
+This file is a comprehensive database for the raw TPM transcript values collected from all patients, along with two additional columns, one for the gene name associated with the transcript and one for the type of transcript (e.g. protein coding)
+
+## Discussion & Conclusion
+In our research, we devised a predictive machine learning (ML) algorithm distinct from our investigative algorithm. We use the normalized transcript values for the sum of the convergent sites, which led to a training f1 score of 0.4522 and an f1 in testing data of 0.2493. The discrepancy between the training and testing data likely arises from overfitting, which is expected in ML algorithms. The lower F1 score in the training data, even when compared to the methylation data, suggests that methylation is still the best option for building a predictive algorithm; this may be due to the purity of the tumour sample that was sequenced for the RNA-seq data, as lower tumour purity will lead to more minor overall differences between our groups.
