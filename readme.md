@@ -33,7 +33,7 @@ The workflow is segmented into phases, each designed to refine the model's accur
 - The centroid locations are saved, providing a stable basis for future sample group predictions based on CpG probe analysis.
 
 ## Scoring Metric
-The F1 score is used to categorize patients into groups with the worst overall survival outcomes to evaluate and identify CpG sites used as hyperparameters. The F1 score balances precision and recall, which is crucial for handling imbalanced data classes in binary classification problems.
+The F1 score categorizes patients into groups with the worst overall survival outcomes to evaluate and identify CpG sites used as hyperparameters. The F1 score balances precision and recall, which is crucial for handling imbalanced data classes in binary classification problems.
 
 ### Calculations
 - **Precision** " = D / (D + (l/α)) "
@@ -46,5 +46,11 @@ Where:
 - α = Median survival period before cancer deaths across all patient data.
 - σ = Number of known patients that succumbed to cancer in another cluster.
 
-## Conclusion
-This hybrid model integrates k-means clustering with estimation maximization, aiming for robust optimization in predicting patient groupings based on CpG probe analysis. Using F1 scores for hyperparameter evaluation emphasizes the model's effectiveness in binary classification problems, particularly in scenarios with imbalanced datasets.
+## Discussion & Conclusion
+In our research, we devised a predictive machine learning (ML) algorithm distinct from our investigative algorithm. One key difference was the choice to exclude the predictive algorithm from a final reduction and reintegration of CpG probes within a k-means EM cycle during the algorithm's final phase. This decision was intentional. Despite the potential of such a cycle to enhance patient grouping within the training data, it also risked augmenting generalized error. In simpler terms, it threatened to reduce performance on the testing data. The primary goal was establishing a model that would perform equivalently on the training and testing data.
+
+Notably, the F1 score within our worst overall survival group showed improvement in the testing data, rising from 0.611 during training to 0.800 during testing. While unusual, such results can occur occasionally in some testing sets, especially if the model and hyperparameters are chosen to minimize generalized error. Initially, the first cluster displayed the best-predicted survival rate. However, this group diverged from its expected trend after 85 months, at which point only three patients remained under observation.
+
+When analyzing Kaplan-Meier survival curves, we often notice a deviation from the original trend or a steep decline towards the end, when few patients remain under study. Several factors contribute to this phenomenon. A significant element is the weight each event—like death or relapse—has on the overall survival probability. With fewer patients left in the study, each event has a more significant proportional effect on the estimated survival probability. This is a consequence of the smaller denominator in the survival probability calculation, meaning that even a single event can lead to a noticeable decrease in the curve.
+
+Attrition bias is another aspect affecting the late-stage trend deviation. If attrition is not random and is tied to the event likelihood, it can introduce bias into the results. Furthermore, the assumption of a homogeneous population inherent in the KM estimator can impact the curve's final part. The estimator assumes censored individuals share the same survival prospects as those who continue to be observed however, if the remaining subjects towards the end of the study are different from the initial group, this could lead to an abrupt change in the curve.
